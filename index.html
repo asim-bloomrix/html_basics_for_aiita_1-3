@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Registration Form</title>
+</head>
+<body>
+    <h1>Intern Registration Form</h1>
+    <p>
+        Complete this form to apply for an internship.
+        Fields marked as required must be completed.
+    </p>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="first-name">First Name:</label>
+            <input
+                type="text"
+                id="first-name"
+                name="first_name"
+                placeholder="Enter your first name"
+                autocomplete="given-name"
+                required
+            >
+            <br><br>
+            <label for="last-name">Last Name:</label>
+            <input
+                type="text"
+                id="last-name"
+                name="last_name"
+                placeholder="Enter your last name"
+                autocomplete="family-name"
+                required
+            >
+            <br><br>
+
+            <label for="email">Email Address:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="abc@example.com"
+                autocomplete="email"
+                required
+            >
+            <br><br>
+            <label for="phone">Telephone Number:</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="03001234567"
+                pattern="[0-9]{11}"
+                title="Enter an 11-digit phone number."
+                autocomplete="tel"
+                required
+            >
+            <br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input
+                type="date"
+                id="dob"
+                name="date_of_birth"
+                autocomplete="bday"
+                required
+            >
+            <br><br>
+
+            <label for="address">Address:</label>
+            <textarea
+                id="address"
+                name="address"
+                rows="3"
+                cols="30"
+                placeholder="Enter your complete address"
+                autocomplete="street-address"
+                required
+            ></textarea>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Internship Preferences</legend>
+
+            <label for="interview-time">Preferred Interview Time:</label>
+            <input
+                type="time"
+                id="interview-time"
+                name="interview_time"
+                required
+            >
+            <br><br>
+
+            <label for="training-month">Preferred Training Month:</label>
+            <input
+                type="month"
+                id="training-month"
+                name="training_month"
+                required
+            >
+            <br><br>
+
+            <label for="training-week">Preferred Training Week:</label>
+            <input
+                type="week"
+                id="training-week"
+                name="training_week"
+            >
+            <br><br>
+
+            <label for="portfolio">Portfolio URL:</label>
+            <input
+                type="url"
+                id="portfolio"
+                name="portfolio_url"
+                placeholder="https://example.com"
+                autocomplete="url"
+            >
+            <br><br>
+
+            <label for="resume">Upload Resume (PDF or Word):</label>
+            <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+                required
+            >
+            <br><br>
+
+            <label for="password">Create Password:</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="new-password"
+                required
+            >
+            <br><br>
+
+            <label for="milestone">Current Education Level:</label>
+            <select id="milestone" name="education_level" required>
+                <option value="">Select your education level</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="graduate">Graduate</option>
+                <option value="postgraduate">Postgraduate</option>
+            </select>
+            <br><br>
+
+            <label for="department">Preferred Internship Department:</label>
+            <select id="department" name="department" required>
+                <option value="">Choose a department</option>
+                <optgroup label="Development">
+                    <option value="frontend">Frontend Development</option>
+                    <option value="backend">Backend Development</option>
+                </optgroup>
+                <optgroup label="Other Technical Fields">
+                    <option value="database">Database</option>
+                    <option value="devops">DevOps</option>
+                </optgroup>
+            </select>
+            <br><br>
+
+            <label for="search">Search for a Skill:</label>
+            <input
+                type="search"
+                id="search"
+                name="skill_search"
+                placeholder="e.g. HTML"
+            >
+            <br><br>
+
+            <label for="color">Preferred Work Theme Color:</label>
+            <input type="color" id="color" name="preferred_color">
+            <br><br>
+
+            <label for="skill-level">Rate Your Current Skill Level (1–10):</label>
+            <input
+                type="range"
+                id="skill-level"
+                name="skill_level"
+                min="1"
+                max="10"
+                step="1"
+                value="5"
+            >
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Technical Skills</legend>
+            <p>Select all the skills you have experience with:</p>
+
+            <input type="checkbox" id="frontend" name="skills" value="frontend">
+            <label for="frontend">Frontend</label>
+            <br>
+
+            <input type="checkbox" id="backend" name="skills" value="backend">
+            <label for="backend">Backend</label>
+            <br>
+
+            <input type="checkbox" id="database" name="skills" value="database">
+            <label for="database">Database</label>
+            <br>
+
+            <input type="checkbox" id="devops" name="skills" value="devops">
+            <label for="devops">DevOps</label>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="notes">Additional Notes:</label>
+            <textarea
+                id="notes"
+                name="additional_notes"
+                rows="4"
+                cols="40"
+                placeholder="Tell us anything else we should know."
+            ></textarea>
+            <br><br>
+
+            <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                value="accepted"
+                required
+            >
+            <label for="terms">
+                I confirm that the information provided is correct.
+            </label>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Submit Application</button>
+        <button type="reset">Reset Form</button>
+    </form>
+
+    <h2>Available Training Courses</h2>
+
+    <table>
+        <caption>Internship Training Course Details</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Level</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>HTML Fundamentals</td>
+                <td>2 Weeks</td>
+                <td>Beginner</td>
+            </tr>
+            <tr>
+                <td>CSS Fundamentals</td>
+                <td>3 Weeks</td>
+                <td>Beginner</td>
+            </tr>
+            <tr>
+                <td>JavaScript Fundamentals</td>
+                <td>4 Weeks</td>
+                <td>Intermediate</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Total Training Duration</td>
+                <td>9 Weeks</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
